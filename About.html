@@ -1,1 +1,181 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> <meta name="Home" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 2.5rem;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+#logo {
+  float: left;
+}
+
+li {
+  float: right;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: left;
+  padding: 2.4rem 1rem 1rem 1rem;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  transition: background-color 0.25s ease-in-out;
+}
+
+#logo a:hover {
+  background-color: transparent !important;
+}
+
+li:not(#logo) a:hover,
+.work:hover .dropbtn {
+  color: #EE22AA;
+}
+
+#logo a {
+  padding: 0;
+  margin: 1rem;
+  width: 25vw;
+  height: 25vh;
+  z-index: 100;
+  display: block;
+  background-image: url("https://i.imgur.com/HK1XRYu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  text-indent: -9999px;
+}
+
+li.work {
+  display: inline-block;
+}
+
+.work-content {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: max-height 0.15s ease-in-out;
+}
+
+.work-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  text-align: left;
+}
+
+.work-content a:hover {
+  background-color: white;
+}
+
+.work:hover .work-content {
+  max-height: 75vh;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0rem auto;
+  padding: 2rem;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0.5vw 10vw 12vw 10vw;
+  font-family: Montserrat;
+  color: black;
+}
+
+.text-image-row {
+  display: flex;           
+  align-items: center;     
+  gap: 2rem;               
+  flex-wrap: wrap;        
+}
+
+.text-block {
+  flex: 1;                
+  min-width: 250px;       
+}
+
+.image-block {
+  flex: 1;                 
+  min-width: 300px;
+}
+
+.image-block img {
+  width: 100%;             
+  height: auto;            
+  border-radius: 8px;      
+}
+@media screen and (max-width: 1000px) {
+  .text-image-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+</style>
+<body>
+
+<div class="container">
+  <ul>
+    <li id="logo"><a href="index.html"></a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="work">
+      <a href="javascript:void(0)" class="dropbtn">Work</a>
+      <div class="work-content">
+        <a href="paintings.html">Paintings</a>
+        <a href="sculptures.html">Sculptures</a>
+        <a href="other.html">Other Work</a>
+      </div>
+    </li>
+  </ul>
+   <div class="text-image-row">
+    <div class="text-block">
+      <h2>About the Artist</h2>
+      <p>
+        Abigail Platt is a Utah based artist originally from Boise, Idaho. She is currently pursuing a BA in Art at Brigham Young University, where she is expected to graduate in 2027. Growing up in nature-rich environments shaped her creative practice and continues to inspire her exploration of fluidity, growth, and environmental themes in her work.
+      </p>
+      <p>
+      As a multidisciplinary visual artist, Abigail works primarily in painting and sculpture. Her paintings are usually made in acrylic paints, while her sculptural works range in medium from found-objects to metal or wood. Occasionally, she branches out to other disciplines like print-making or ceramics. All of her pieces invite deeper conceptual thinking and connectedness between the natural world and the lives of her viewers.
+	</p>
+    <p>
+Abigail’s work has been exhibited in local and university galleries including the Initial Point Gallery in Meridian, Idaho, The Weight Room Gallery at BYU, and The Gallery at the Station in Ogden, Utah. She has also participated in the BYU Summer Art Intensive.
+	</p>
+    <p>
+For exhibition inquiries or commission requests, please visit her <a href="contact.html">Contact page</a>.
+	</p>
+    </div>
+    <div class="image-block">
+      <img src="https://i.imgur.com/4bRCZVU.jpeg" alt="Artist portrait">
+    </div>
+  </div>
+</div>
+</Body>
+</html>
