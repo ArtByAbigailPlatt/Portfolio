@@ -1,7 +1,8 @@
 <!doctype html> 
 <html lang="en"> 
 <head> 
-<meta charset="utf-8"> <meta name="Home" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"> 
+<meta name="Home" content="width=device-width, initial-scale=1">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -13,6 +14,14 @@ ul {
   overflow: hidden;
   background-color: white;
 }
+
+@media screen and (max-width: 800px) {
+  /* Hide the regular horizontal menu */
+  .container > ul li:not(#logo) {
+    display: none;
+  }
+}
+
 
 #logo {
   float: left;
@@ -98,7 +107,6 @@ li.work {
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0.5vw 10vw 12vw 10vw;
   font-family: Montserrat;
@@ -127,6 +135,7 @@ body {
   height: auto;            
   border-radius: 8px;      
 }
+
 @media screen and (max-width: 1000px) {
   .text-image-row {
     flex-direction: column;
@@ -139,8 +148,123 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  :root {
+    --link: #f44;
+    --focus: #c00;
+    --visited: #f99;
+    --bg: #232323;
+  }
+
+  #menuToggle {
+    display: block;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: var(--bg);
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: var(--link);
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--link);
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: 
+      transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--bg);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /* FIXED + RIGHT-SIDE SLIDE MENU */
+ #menu {
+  position: fixed;
+  top: 1000px;
+  right: 1000px;
+
+  background: rgba(230,230,230,0.9);
+  width: 80vw;
+  height: 100vh;
+  padding: 50px;
+  padding-top: 125px;
+
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  transform: translate(100%, 0);  /* ← FIXED: now slides from RIGHT */
+  transform-origin: 100% 0%;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+  #menuToggle input:checked ~ #menu {
+    transform: translate(0, 0);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+}
 </style>
+</head>
+
 <body>
+
+<!-- MOBILE MENU -->
+<nav role="navigation">
+ 
+</nav>
 
 <div class="container">
   <ul>
@@ -156,26 +280,44 @@ body {
       </div>
     </li>
   </ul>
-   <div class="text-image-row">
+
+ <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul id="menu">
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="work"><a href="paintings.html">Paintings</a></li>
+      <li><a href="sculptures.html">Sculptures</a></li>
+      <li><a href="other.html">Other Work</a></li>
+    </ul>
+  </div>
+  
+  <div class="text-image-row">
     <div class="text-block">
       <h2>About the Artist</h2>
       <p>
         Abigail Platt is a Utah based artist originally from Boise, Idaho. She is currently pursuing a BA in Art at Brigham Young University, where she is expected to graduate in 2027. Growing up in nature-rich environments shaped her creative practice and continues to inspire her exploration of fluidity, growth, and environmental themes in her work.
       </p>
       <p>
-      As a multidisciplinary visual artist, Abigail works primarily in painting and sculpture. Her paintings are usually made in acrylic paints, while her sculptural works range in medium from found-objects to metal or wood. Occasionally, she branches out to other disciplines like print-making or ceramics. All of her pieces invite deeper conceptual thinking and connectedness between the natural world and the lives of her viewers.
-	</p>
-    <p>
-Abigail’s work has been exhibited in local and university galleries including the Initial Point Gallery in Meridian, Idaho, The Weight Room Gallery at BYU, and The Gallery at the Station in Ogden, Utah. She has also participated in the BYU Summer Art Intensive.
-	</p>
-    <p>
-For exhibition inquiries or commission requests, please visit her <a href="contact.html">Contact page</a>.
-	</p>
+        As a multidisciplinary visual artist, Abigail works primarily in painting and sculpture. Her paintings are usually made in acrylic paints, while her sculptural works range in medium from found-objects to metal or wood. Occasionally, she branches out to other disciplines like print-making or ceramics. All of her pieces invite deeper conceptual thinking and connectedness between the natural world and the lives of her viewers.
+      </p>
+      <p>
+        Abigail’s work has been exhibited in local and university galleries including the Initial Point Gallery in Meridian, Idaho, The Weight Room Gallery at BYU, and The Gallery at the Station in Ogden, Utah. She has also participated in the BYU Summer Art Intensive.
+      </p>
+      <p>
+        For exhibition inquiries or commission requests, please visit her <a href="contact.html">Contact page</a>.
+      </p>
     </div>
+
     <div class="image-block">
-      <img src="https://i.imgur.com/4bRCZVU.jpeg" alt="Artist portrait">
+      <img src="https://i.imgur.com/4bRCZVU.jpeg" alt="Pictureofme">
     </div>
   </div>
 </div>
-</Body>
+
+</body>
 </html>
