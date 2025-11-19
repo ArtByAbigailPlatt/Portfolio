@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="Paintings" content="width=device-width, initial-scale=1">
+
+  <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 2.5rem;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    #logo {
+      float: left;
+    }
+
+    li {
+      float: right;
+    }
+
+    li a, .dropbtn {
+      display: inline-block;
+      color: black;
+      text-align: left;
+      padding: 2.4rem 1rem 1rem 1rem;
+      text-decoration: none;
+      Font-family: Montserrat; 
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      transition: background-color 0.25s ease-in-out;
+    }
+
+    #logo a:hover {
+      background-color: transparent !important;
+    }
+
+    li:not(#logo) a:hover,
+    .work:hover .dropbtn {
+      color: #EE22AA;
+    }
+
+    #logo a {
+      padding: 0;
+      margin: 1rem;
+      width: 25vw;
+      height: 25vh;
+      z-index: 100;
+      display: block;
+      background-image: url("https://i.imgur.com/HK1XRYu.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left top;
+      text-indent: -9999px;
+    }
+
+    li.work {
+      display: inline-block;
+    }
+
+    .work-content {
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      z-index: 1;
+      transition: max-height 0.15s ease-in-out;
+    }
+
+    .work-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: right;
+    }
+
+    .work-content a:hover {
+      background-color: white;
+    }
+
+    .work:hover .work-content {
+      max-height: 75vh;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .container {
+  max-width: 1000px; 
+  margin: 0rem auto;
+  padding: 2rem;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+ * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: .5vw 10vw 12vw 10vw;
+    Font-family: Montserrat;
+    font-color:white;
+  }
+
+  .header {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .row img {
+    width: 100%;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .column a:link {
+    mix-blend-mode: normal;
+    position:relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, rgba(255,255,0,0), rgba(255,255,0,0));
+  }
+
+  .caption {
+  	opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: rgba(255,255,255,0.6);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    color: #000;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .caption p {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(255,255,0,0), #EE22AA);
+    margin: 0;
+  }
+
+  .column a:hover .caption {
+  	opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  @media screen and (max-width: 1050px) {
+  .column {
+  	-ms-flex: 33.33%;
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  </style>
+</head>
+
+<body>
+
+ <div class="container">
+    <ul>
+      <li id="logo"><a href="index.html"></a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="work">
+        <a href="javascript:void(0)" class="dropbtn">Work</a>
+        <div class="work-content">
+          <a href="paintings.html">Paintings</a>
+          <a href="sculptures.html">Sculptures</a>
+          <a href="other.html">Other Work</a>
+        </div>
+      </li>
+    </ul>
+  
+  <div class="row">
+  <div class="column">
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/JGzoc8lor/martha-wilson.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/QHgoc8lqf/gordon-matta-clark.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/YDtoc8ltt/rachel-whiteread.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/BuPoc8lw0/andrea-fraser.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/rujoc8k5v/nam-june-paik-and-fluxus-courtesy-of-popista.com_.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/GUmoc8k5o/nam-june-paik-with-buddha-tv-1974-at-projects-nam-june-paik-museum-of-modern-art-new-york-1977.-__-eric-kroll..jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/3qJoc8k5h/matisse.jpeg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="column">
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/Ix8oc8k5c/cindy-sherman.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/COjoc8k4w/maya-deren.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/bnToc8k45/chien-andalou.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/yxFoc8jto/claude-cahun-que-me-veux-tu-1928.jpeg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/okaoc8jtk/de-maria.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/etYoc8jt9/eva-hesse.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="column">
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/RZqoc8jta/nancy-holt.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/rnxoc8jzg/senga-nengudi.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/G2doc8jzs/claes-oldenberg.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/xgLoc8jp1/abromovic-ulay-arrow.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/fI3oc8jp0/abramovic-ulay-hair.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/kHmoc8c7x/beuys-america-coyote.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/PWjoc8c9c/mel-bochner.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="column">
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/Lbloc8c9y/baroness-elsa-von-frietag-loringhoven.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/2nkoc8cah/yves-klein-saut-dans-le-vide-performance-.-collaborazione-di-harry-shunk-e-janos-kender.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/C8roc8c99/agnes-martin.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/MCRoc8jns/kosuth-1-and-3.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/eFcoc8jny/frida-kahlo.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+    <a href="">
+      <img src="https://static.tumblr.com/od3ztre/Hweoc8jo6/kara-walker.jpg">
+      <div class="caption">
+      	<p>this is a caption</p>
+      </div>
+    </a>
+</div>
+
+</body>
+</html>
+
+
+
+
