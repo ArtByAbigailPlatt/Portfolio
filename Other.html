@@ -3,112 +3,120 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRVJ0W00LB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRVJ0W00LB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-ZRVJ0W00LB');
-</script>
+    gtag('config', 'G-ZRVJ0W00LB');
+  </script>
   <meta charset="utf-8">
   <meta name="Other" content="width=device-width, initial-scale=1">
 
   <style>
-  
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-  
-    ul {
-      list-style-type: none;
-      margin: 0;
-      margin-top: 2.5rem;
-      padding: 0;
-      overflow: hidden;
-      background-color: white;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-    #logo {
-      float: left;
-    }
+      
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 2.5rem;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
 
-    li {
-      float: right;
-    }
+@media screen and (max-width: 800px) {
+  .container > ul li:not(#logo) {
+    display: none;
+  }
+}
 
-    li a, .dropbtn {
-      display: inline-block;
-      color: black;
-      text-align: left;
-      padding: 2.4rem 1rem 1rem 1rem;
-      text-decoration: none;
-      Font-family: Montserrat; 
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-      transition: background-color 0.25s ease-in-out;
-    }
+#logo {
+  float: left;
+}
 
-    #logo a:hover {
-      background-color: transparent !important;
-    }
+li {
+  float: right;
+}
 
-    li:not(#logo) a:hover,
-    .work:hover .dropbtn {
-      color: #EE22AA;
-    }
+li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: left;
+  padding: 2.4rem 1rem 1rem 1rem;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  transition: background-color 0.25s ease-in-out;
+}
 
-    #logo a {
-      padding: 0;
-      margin: 1rem;
-      width: 25vw;
-      height: 25vh;
-      z-index: 100;
-      display: block;
-      background-image: url("https://i.imgur.com/HK1XRYu.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: left top;
-      text-indent: -9999px;
-    }
+#logo a:hover {
+  background-color: transparent !important;
+}
 
-    li.work {
-      display: inline-block;
-    }
+li:not(#logo) a:hover,
+.work:hover .dropbtn {
+  color: #EE22AA;
+}
 
-    .work-content {
-      max-height: 0;
-      overflow: hidden;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-      z-index: 1;
-      transition: max-height 0.15s ease-in-out;
-    }
+#logo a {
+  padding: 0;
+  margin: 1rem;
+  width: 25vw;
+  height: 25vh;
+  z-index: 100;
+  display: block;
+  background-image: url("https://i.imgur.com/HK1XRYu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
 
-    .work-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: right;
-    }
+li.work {
+  display: inline-block;
+}
 
-    .work-content a:hover {
-      background-color: white;
-    }
+.work-content {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: max-height 0.15s ease-in-out;
+}
 
-    .work:hover .work-content {
-      max-height: 75vh;
-      transition: max-height 0.5s ease-in-out;
-    }
+.work-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  text-align: left;
+}
 
-    .container {
-  max-width: 1000px; 
+.work-content a:hover {
+  background-color: white;
+}
+
+.work:hover .work-content {
+  max-height: 75vh;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.container {
+  position: relative;
+  max-width: 1000px;
   margin: 0rem auto;
   padding: 2rem;
   background-color: white;
   box-sizing: border-box;
 }
+
 
  * {
     box-sizing: border-box;
@@ -213,7 +221,133 @@
       max-width: 100%;
     }
   }
+  @media screen and (max-width: 1000px) {
+  .text-image-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --link: #f44;
+    --focus: #c00;
+    --visited: #f99;
+    --bg: #232323;
+  }
+
+  #menuToggle {
+    display: block;
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    z-index: 1000;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: var(--bg);
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: var(--link);
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2000;
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #EE22AA;
+    border-radius: 3px;
+    z-index: 7000;
+    transform-origin: 4px 0px;
+    transition: 
+      transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--bg);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
   
+  #menu {
+    position: absolute;
+    top: 50px;
+    right: -150px;
+    background: rgba(230,230,230,0.9);
+    width: 33vw;
+    height: 550px;
+    z-index:1000;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(100%, 0);
+    transform-origin: 100% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    display: flex;            
+    flex-direction: column;  
+    padding: 0;
+    margin: 0;
+  }
+
+  #menuToggle input:checked ~ #menu {
+    transform: translate(0, 0);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menu li a {
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #menuToggle {
+    display: none;
+  }
+}
   </style>
 </head>
 
@@ -233,176 +367,74 @@
         </div>
       </li>
     </ul>
+
+ <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul id="menu">
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="About.html">About</a></li>
+      <li class="work"><a href="Paintings.html">Paintings</a></li>
+      <li><a href="Sculptures.html">Sculptures</a></li>
+      <li><a href="Other.html">Other Work</a></li>
+    </ul>
+  </div>
   
-  <div class="row">
-  <div class="column">
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/JGzoc8lor/martha-wilson.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/QHgoc8lqf/gordon-matta-clark.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/YDtoc8ltt/rachel-whiteread.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/BuPoc8lw0/andrea-fraser.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/rujoc8k5v/nam-june-paik-and-fluxus-courtesy-of-popista.com_.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/GUmoc8k5o/nam-june-paik-with-buddha-tv-1974-at-projects-nam-june-paik-museum-of-modern-art-new-york-1977.-__-eric-kroll..jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/3qJoc8k5h/matisse.jpeg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-  </div>
 
-  <div class="column">
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/Ix8oc8k5c/cindy-sherman.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/COjoc8k4w/maya-deren.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/bnToc8k45/chien-andalou.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/yxFoc8jto/claude-cahun-que-me-veux-tu-1928.jpeg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/okaoc8jtk/de-maria.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/etYoc8jt9/eva-hesse.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-  </div>
+    <div class="row">
+         <div class="column">
+        <a href="">
+          <img src="https://i.imgur.com/fThGoeh.jpeg" alt="lithograph of tree">
+          <div class="caption">
+            <p>Where Do We Go?</p>
+          </div>
+        </a>
+     </div>
 
-  <div class="column">
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/RZqoc8jta/nancy-holt.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
+      <div class="column">
+        <a href="">
+          <img src="https://i.imgur.com/BeHywFO.jpeg" alt="relief print of four young girls walking on the beach">
+          <div class="caption">
+            <p>The California Trip</p>
+          </div>
+        </a>
+        <a href="">
+          <img src="https://i.imgur.com/LjMAFA9.mp4" alt="burning sculpture on salt flats video">
+          <div class="caption">
+            <p>Untitled</p>
+          </div>
+        </a>
       </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/rnxoc8jzg/senga-nengudi.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/G2doc8jzs/claes-oldenberg.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/xgLoc8jp1/abromovic-ulay-arrow.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/fI3oc8jp0/abramovic-ulay-hair.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/kHmoc8c7x/beuys-america-coyote.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/PWjoc8c9c/mel-bochner.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-  </div>
 
-  <div class="column">
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/Lbloc8c9y/baroness-elsa-von-frietag-loringhoven.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
+     <div class="column">
+        <a href="">
+          <img src="https://i.imgur.com/fThGoeh.jpeg" alt="lithograph of tree">
+          <div class="caption">
+            <p>Where Do We Go?</p>
+          </div>
+        </a>
+     </div>
+      
+      <div class="column">
+        <a href="">
+          <img src="https://i.imgur.com/BeHywFO.jpeg" alt="relief print of four young girls walking on the beach">
+          <div class="caption">
+            <p>The California Trip</p>
+          </div>
+        </a>
+        <a href="">
+          <img src="https://i.imgur.com/LjMAFA9.mp4" alt="burning sculpture on salt flats video">
+          <div class="caption">
+            <p>Untitled</p>
+          </div>
+        </a>
       </div>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/2nkoc8cah/yves-klein-saut-dans-le-vide-performance-.-collaborazione-di-harry-shunk-e-janos-kender.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/C8roc8c99/agnes-martin.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/MCRoc8jns/kosuth-1-and-3.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/eFcoc8jny/frida-kahlo.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-    <a href="">
-      <img src="https://static.tumblr.com/od3ztre/Hweoc8jo6/kara-walker.jpg">
-      <div class="caption">
-      	<p>this is a caption</p>
-      </div>
-    </a>
-</div>
+
+    </div> 
+  </div> 
 
 </body>
 </html>
