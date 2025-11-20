@@ -16,12 +16,10 @@ ul {
 }
 
 @media screen and (max-width: 800px) {
-  /* Hide the regular horizontal menu */
   .container > ul li:not(#logo) {
     display: none;
   }
 }
-
 
 #logo {
   float: left;
@@ -63,7 +61,6 @@ li:not(#logo) a:hover,
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left top;
-  text-indent: -9999px;
 }
 
 li.work {
@@ -100,6 +97,7 @@ li.work {
 }
 
 .container {
+  position: relative;
   max-width: 1000px;
   margin: 0rem auto;
   padding: 2rem;
@@ -144,11 +142,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   :root {
     --link: #f44;
     --focus: #c00;
@@ -158,8 +151,8 @@ body {
 
   #menuToggle {
     display: block;
-    position: fixed;
-    top: 50px;
+    position: absolute;
+    top: 120px;
     right: 50px;
     z-index: 1;
     -webkit-user-select: none;
@@ -195,7 +188,7 @@ body {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: var(--link);
+    background: #EE22AA;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -227,26 +220,25 @@ body {
   #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
+  
+  #menu {
+    position: absolute;
+    top: 50px;
+    right: -150px;
+    background: rgba(230,230,230,0.9);
+    width: 33vw;
+    height: 550px;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(100%, 0);
+    transform-origin: 100% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    display: flex;            
+    flex-direction: column;  
+    padding: 0;
+    margin: 0;
+  }
 
-  /* FIXED + RIGHT-SIDE SLIDE MENU */
- #menu {
-  position: fixed;
-  top: 1000px;
-  right: 1000px;
-
-  background: rgba(230,230,230,0.9);
-  width: 80vw;
-  height: 100vh;
-  padding: 50px;
-  padding-top: 125px;
-
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-
-  transform: translate(100%, 0);  /* ← FIXED: now slides from RIGHT */
-  transform-origin: 100% 0%;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
   #menuToggle input:checked ~ #menu {
     transform: translate(0, 0);
   }
@@ -255,16 +247,23 @@ body {
     padding: 10px 0;
     font-size: 22px;
   }
+
+  #menu li a {
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #menuToggle {
+    display: none;
+  }
 }
 </style>
 </head>
 
 <body>
-
-<!-- MOBILE MENU -->
-<nav role="navigation">
- 
-</nav>
 
 <div class="container">
   <ul>
